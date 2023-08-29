@@ -15,7 +15,7 @@
 // 1. Setting everything up
 // create a new react app
 // create a new firebase project to store hero images and anything else
-// initialize firebase, configure
+// initialize firebase, configure (oops, forgot to mention this was stretch goal as i dont need firebase for pictures)
 
 // 2. Make components
 // create an app component
