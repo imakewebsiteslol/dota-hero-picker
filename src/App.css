@@ -73,3 +73,40 @@ body {
   margin: 5px 0;
 }
 
+/* gotta make it responsive yo */
+
+/* smol screens */
+@media (max-width: 576px) {
+  .content {
+    flex-direction: column; 
+    align-items: center; 
+  }
+
+  .hero-list {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+
+  .hero-details {
+    max-width: 100%; 
+    position: static;
+    margin-top: 20px; 
+  }
+}
+
+/* less smol screens */
+@media (min-width: 577px) and (max-width: 992px) {
+  .hero-list {
+    grid-template-columns: repeat(3, 1fr); 
+  }
+}
+
+/* big screens, desktop and stuff */
+@media (min-width: 993px) {
+  .content {
+    justify-content: space-between;
+  }
+
+  .hero-list {
+    grid-template-columns: repeat(6, 1fr); 
+  }
+}
