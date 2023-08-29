@@ -20,7 +20,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>OpenDota Heroes</h1>
+      <h1>Dota Hero Picker</h1>
       <div className="content">
         <HeroList heroes={heroes} onSelectHero={handleSelectHero} />
         {selectedHero && <HeroDetails hero={selectedHero} />}
