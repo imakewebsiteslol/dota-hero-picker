@@ -1,38 +1,121 @@
+body, h1, h2, p {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f7f7f7;
+  font-family: Arial, sans-serif;
+}
+
 .App {
   text-align: center;
+  padding: 30px;
+  background-color: #3949ab;
+  color: #010002;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App h1 {
+  color: #ffffff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.content {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  flex-grow: 1; 
+  position: relative; 
 }
 
-.App-link {
-  color: #61dafb;
+.hero-list {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 1px;
+  padding: 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  list-style-type: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.hero-list li {
+  background-color: transparent; 
+  padding: 0;
+  margin: 0; 
+  border: none; 
+  position: relative; 
+  color: white !important;
+}
+
+
+.hero-list li img {
+  width: 100%; 
+  height: auto; 
+}
+
+
+.hero-list li img:hover,
+.hero-list li img:active {
+  opacity: 0.7; 
+  border: 2px solid #3949ab; 
+  cursor: pointer; 
+}
+
+
+.hero-details {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 100%;
+  position: fixed;
+  top: 50%; 
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  transition: opacity 0.3s ease-in-out; 
+}
+
+.hero-details:hover {
+  opacity: 0; 
+}
+
+.hero-details h2 {
+  margin-bottom: 10px;
+}
+
+.hero-details p {
+  margin: 5px 0;
+}
+
+/* smol screens */
+@media (max-width: 576px) {
+  .content {
+    flex-direction: column;
+    align-items: center;
   }
-  to {
-    transform: rotate(360deg);
+
+  .hero-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* less smol screens */
+@media (min-width: 577px) and (max-width: 992px) {
+  .hero-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* big screens, desktop and stuff */
+@media (min-width: 993px) {
+  .content {
+    justify-content: space-between;
+  }
+
+  .hero-list {
+    grid-template-columns: repeat(6, 1fr);
   }
 }
